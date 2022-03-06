@@ -18,9 +18,18 @@ class Task07 {
      return("")
     }
     else{
-    for (def str:s.split(" ")) {
-        length<<((int)str[0]+str[-1]+str[2..-2]+str[1])
-    }}
+     for (def str:s.split(" ")) {
+       if(str.length()<=2){
+         if(str.length()==1){
+         length<<((int)str[0])
+         }else{
+         length<<((int)str[0]+str[1])
+         }
+       }else{
+         length<<((int)str[0]+str[-1]+str[2..-2]+str[1])
+       }
+    }
     return length.join(" ")  
     }
+  }
 }
