@@ -8,6 +8,7 @@ package groovylab
 
 class Task09 {
     public static String exec(String command) {
-        throw UnsupportedOperationException('Not Implemented!')
+       def exec=(command.execute())
+       return(exec.text.trim())
     }
 }

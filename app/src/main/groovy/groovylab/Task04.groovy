@@ -8,6 +8,8 @@ package groovylab
 
 class Task04 {
     public static int fib(int n) {
-        throw UnsupportedOperationException('Not Implemented!')
+        def list = [0,1]
+        (n==0)?(list[n]=0):(2..n).each{list[it]=list[it-2]+list[it-1]}
+        return(list[n])
     }
 }

@@ -13,6 +13,14 @@ package groovylab
 
 class Task07 {
     public static String encryptThis(String s) {
-        throw UnsupportedOperationException('Not Implemented!')
+    def length = []
+    if(s.length()==0){
+     return("")
+    }
+    else{
+    for (def str:s.split(" ")) {
+        length<<((int)str[0]+str[-1]+str[2..-2]+str[1])
+    }}
+    return length.join(" ")  
     }
 }
